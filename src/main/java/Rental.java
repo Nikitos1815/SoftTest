@@ -28,8 +28,7 @@ public class Rental {
         double result;
         int choice;
         result = this.days*(this.days + this.kind);
-        choice = this.kind;
-        switch (choice){
+        switch (this.kind){
             case 1:
                 result = result*1.5;
             case 2:
