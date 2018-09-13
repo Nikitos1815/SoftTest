@@ -24,11 +24,11 @@ public class Rental {
         //TODO Some program code
         return days + kind;
     }
-    private double amountFor(Rental rental){
+    private double amountFor(){
         double result;
         int choice;
-        result = rental.getDays()*rental.getBasePrice();
-        choice = rental.getKind();
+        result = this.days*(this.days + this.kind);
+        choice = this.kind;
         switch (choice){
             case 1:
                 result = result*1.5;
@@ -38,7 +38,7 @@ public class Rental {
                 result = result*2.5;
 
         }
-        if(rental.getDays() > 7)
+        if(this.days > 7)
             result = result*3;
 
         return result;
